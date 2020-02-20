@@ -23,9 +23,9 @@ type Env = Map String Value
 
 --NEW TYPES FOR REVERSE MODE
 data ValueR = DualNumber Value (Derivative -> Derivative)
---    deriving Show
--- instance Show (Derivative -> Derivative) where
---     Show = (Derivative -> Derivative)
+
+instance Show ValueR where
+    show (DualNumber v dd) = show (FDualNumber v (dd 1))
 
 data FValue = FDualNumber Value Derivative
   deriving (Eq,Ord,Show)
