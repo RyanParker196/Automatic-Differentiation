@@ -10,9 +10,9 @@ Install stack and use "stack ghci AutoDiff.hs” to load the file into a ghc int
 
 Call either forward or reversed functions given an empty environment: [] and any mathematical expression created using the ValueHat constructor function.
 
-Example:
+# Example:
 
-stack ghci AutoDiff.hs
+$ stack ghci AutoDiff.hs
 
 ## input:
 This is passing an environment containing the Variable X with a value of 5 and derivative of 1 then evaluating the expression (5 + X)
